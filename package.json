@@ -1,0 +1,9 @@
+{
+  "name": "maps-game-v2",
+  "version": "1.0.0",
+  "description": "multi-choice game using static maps",
+  "main": "index.js",
+  "repository": "https://github.com/GBarrBrown/maps-game-v2.git",
+  "author": "gbarrbrown <gbb7899@gmail.com>",
+  "license": "MIT"
+}
