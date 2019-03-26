@@ -1,10 +1,15 @@
 import React from 'react'
-import { Component } from 'react'
+import { Component, Fragment } from 'react'
+
+import Header from './Header'
 
 class App extends Component{
     render(){
         return (
-            <h1>TA DA !!</h1>
+            <Fragment>
+                <Header />
+            </Fragment>
+
         )
     }
 }
