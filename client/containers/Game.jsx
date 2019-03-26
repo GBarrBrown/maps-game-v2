@@ -7,13 +7,17 @@ import LocationChoices from '../components/LocationChoices'
 class Game extends Component{
     constructor(){
         super()
-        this.state = {location: 'London City'}
+        this.state = {
+            location: 'London City',
+            round: 1,
+            score: 0
+        }
     }
     render(){
         return(
             <Fragment>
                 <LocationImg />
-                <h1>{this.state.location}</h1>
+                <h1>Round: {this.state.round}</h1>
                 <LocationChoices />
             </Fragment>
         )
