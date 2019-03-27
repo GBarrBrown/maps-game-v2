@@ -1,8 +1,18 @@
 import React from 'react'
+import { Fragment } from 'react'
 
 const LocationChoices = (props) => {
+    const locations = props.locations
     return (
-        <h1>Location Choices - 4 buttons</h1>
+        <Fragment>
+            <h1>Location Choices</h1>   
+            {locations.map((location, key) => {
+                return <button id={`location${key}`}>{location}</button>
+            })}
+        </Fragment>
+
+
+
     )
 }
 
