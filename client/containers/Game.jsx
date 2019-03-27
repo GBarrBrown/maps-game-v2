@@ -8,7 +8,7 @@ class Game extends Component{
     constructor(){
         super()
         this.state = {
-            location: 'London City',
+            locations: ['London City', 'Istanbul', 'Mexico City', 'Tokyo'],
             round: 1,
             score: 0
         }
@@ -18,7 +18,7 @@ class Game extends Component{
             <Fragment>
                 <LocationImg />
                 <h1>Round: {this.state.round}</h1>
-                <LocationChoices />
+                <LocationChoices locations={this.state.locations}/>
             </Fragment>
         )
     }
