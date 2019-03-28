@@ -28,8 +28,9 @@ class Game extends Component{
     }
 }
 
-function mapStateToProps({newLocations}){
-    return {newLocations}
+function mapStateToProps({updateLocations}){
+    let locations = updateLocations
+    return {locations}
 }
 
 function mapDispatchToProps(dispatch){
