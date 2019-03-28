@@ -1,5 +1,8 @@
 import React from 'react'
 import { Component, Fragment } from 'react'
+import { connect } from 'react-redux'
+
+import { getNewLocations } from '../api/locations'
 
 import LocationImg from '../components/LocationImg'
 import LocationChoices from '../components/LocationChoices'
@@ -19,9 +22,20 @@ class Game extends Component{
                 <LocationImg />
                 <h1>Round: {this.state.round}</h1>
                 <LocationChoices locations={this.state.locations}/>
+                <button onClick={() => {console.log('clicked')}}></button>
             </Fragment>
         )
     }
 }
 
-export default Game
+function mapStateToProps({newLocations}){
+    return {newLocations}
+}
+
+function mapDispatchToProps(dispatch){
+    return{
+        getNewLocations: () => dispatch(getNewLocations())
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Game)
