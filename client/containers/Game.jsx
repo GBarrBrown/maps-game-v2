@@ -22,7 +22,7 @@ class Game extends Component{
                 <LocationImg />
                 <h1>Round: {this.state.round}</h1>
                 <LocationChoices locations={this.state.locations}/>
-                <button onClick={() => {console.log('clicked')}}></button>
+                <button onClick={() => {this.props.getNewLocations()}}></button>
             </Fragment>
         )
     }
